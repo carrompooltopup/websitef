@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Fire Diamond BD</title>
+    <style>
+        /* CSS Code */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .diamond-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .diamond-grid button {
+            background-color: white;
+            color: black;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: border-color 0.3s ease;
+        }
+
+        .diamond-grid button.selected {
+            border-color: orange;
+        }
+
+        .uid-section {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #selected-price {
+            font-size: 20px;
+            color: orange;
+            margin-bottom: 10px;
+        }
+
+        #uid {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #buy-now {
+            width: 80%;
+            padding: 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #buy-now:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Free Fire Diamond BD</h1>
+        <div class="diamond-grid">
+            <button data-price="25">25 Diamonds - ৳25</button>
+            <button data-price="40">50 Diamonds - ৳40</button>
+            <button data-price="75">115 Diamonds - ৳75</button>
+            <button data-price="150">240 Diamonds - ৳150</button>
+            <button data-price="225">355 Diamonds - ৳225</button>
+            <button data-price="300">480 Diamonds - ৳300</button>
+            <button data-price="325">505 Diamonds - ৳325</button>
+            <button data-price="380">610 Diamonds - ৳380</button>
+            <button data-price="455">725 Diamonds - ৳455</button>
+            <button data-price="765">1240 Diamonds - ৳765</button>
+            <button data-price="1490">2530 Diamonds - ৳1,490</button>
+            <button data-price="2980">5060 Diamonds - ৳2,980</button>
+            <button data-price="4470">7590 Diamonds - ৳4,470</button>
+            <button data-price="5960">10120 Diamonds - ৳5,960</button>
+            <button data-price="7390">12650 Diamonds - ৳7,390</button>
+            <button data-price="75">EVO ACCESS: 3 DAY - ৳75</button>
+            <button data-price="110">EVO ACCESS: 7 DAY - ৳110</button>
+            <button data-price="330">EVO ACCESS: 30 DAY - ৳330</button>
+            <button data-price="150">Weekly Membership - ৳150</button>
+            <button data-price="750">Monthly Membership - ৳750</button>
+            <button data-price="150">Level Up Pass - ৳150</button>
+            <button data-price="45">Weekly Lite - ৳45</button>
+        </div>
+
+        <div class="uid-section">
+            <div id="selected-price">৳0</div>
+            <label for="uid">UID *</label>
+            <input type="text" id="uid" placeholder="আপনার UID এখানে দিন">
+            <button id="buy-now">Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript Code
+        const diamondButtons = document.querySelectorAll(".diamond-grid button");
+        const selectedPriceDisplay = document.getElementById("selected-price");
+        let selectedPrice = null;
+
+        diamondButtons.forEach(button => {
+            button.addEventListener("click", () => {
+                // Remove 'selected' class from all buttons
+                diamondButtons.forEach(btn => btn.classList.remove("selected"));
+                // Add 'selected' class to the clicked button
+                button.classList.add("selected");
+
+                // Update the selected price
+                selectedPrice = button.getAttribute("data-price");
+                selectedPriceDisplay.textContent = `৳${selectedPrice}`;
+            });
+        });
+
+        const buyNowButton = document.getElementById("buy-now");
+        const uidInput = document.getElementById("uid");
+
+        buyNowButton.addEventListener("click", () => {
+            const uid = uidInput.value.trim();
+            if (!uid) {
+                alert("দয়া করে আপনার UID দিন!");
+                return;
+            }
+            if (!selectedPrice) {
+                alert("দয়া করে একটি প্যাকেজ নির্বাচন করুন!");
+                return;
+            }
+            alert(`ধন্যবাদ! আপনার UID: ${uid} এবং মূল্য: ৳${selectedPrice} জমা হয়েছে।`);
+        });
+    </script>
+</body>
+</html>

@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire Diamond BD</title>
     <style>
-        /* CSS Code */
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -30,19 +29,29 @@
 
         .header {
             display: flex;
-            justify-content: center;
             align-items: center;
-            margin-top: 20px;
+            justify-content: space-between;
+            padding: 10px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
         .header h1 {
             margin: 0;
-            margin-right: 10px;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
         }
 
         .header img {
             width: 25px;
             height: 25px;
+            margin-left: 10px;
+        }
+
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
         }
 
         .diamond-grid {
@@ -105,10 +114,11 @@
 </head>
 <body>
     <div class="header">
+        <span class="hamburger">&#9776;</span> <!-- থ্রি লাইন আইকন -->
         <h1>Garena FreeFire</h1>
         <img src="https://i.ibb.co/5FZ6HmM/12559876.png" alt="Verification Logo">
     </div>
-    
+
     <div class="container">
         <h1>Free Fire Diamond BD</h1>
         <div class="diamond-grid">
@@ -145,19 +155,14 @@
     </div>
 
     <script>
-        // JavaScript Code
         const diamondButtons = document.querySelectorAll(".diamond-grid button");
         const selectedPriceDisplay = document.getElementById("selected-price");
         let selectedPrice = null;
 
         diamondButtons.forEach(button => {
             button.addEventListener("click", () => {
-                // Remove 'selected' class from all buttons
                 diamondButtons.forEach(btn => btn.classList.remove("selected"));
-                // Add 'selected' class to the clicked button
                 button.classList.add("selected");
-
-                // Update the selected price
                 selectedPrice = button.getAttribute("data-price");
                 selectedPriceDisplay.textContent = `৳${selectedPrice}`;
             });

@@ -110,11 +110,32 @@
         #buy-now:hover {
             background-color: #218838;
         }
+
+        .bottom-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .bottom-buttons button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 0 10px;
+        }
+
+        .bottom-buttons button:hover {
+            background-color: #0056b3;
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <span class="hamburger">&#9776;</span> <!-- থ্রি লাইন আইকন -->
+        <span class="hamburger" onclick="window.location.href='https://chatgpt.com/'">&#9776;</span>
         <h1>Garena FreeFire</h1>
         <img src="https://i.ibb.co/5FZ6HmM/12559876.png" alt="Verification Logo">
     </div>
@@ -151,6 +172,11 @@
             <label for="uid">UID *</label>
             <input type="text" id="uid" placeholder="আপনার UID এখানে দিন">
             <button id="buy-now">Buy Now</button>
+        </div>
+
+        <div class="bottom-buttons">
+            <button>Live chat</button>
+            <button>Live prove</button>
         </div>
     </div>
 

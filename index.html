@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Fire Diamond BD</title>
     <style>
+        /* CSS styles */
         body {
             font-family: Arial, sans-serif;
             background-color: #f2f2f2;
@@ -175,12 +176,13 @@
         </div>
 
         <div class="bottom-buttons">
-            <button>Live chat</button>
-            <button>Live prove</button>
+            <button id="live-chat">Live chat</button>
+            <button id="live-prove">Live prove</button>
         </div>
     </div>
 
     <script>
+        // JavaScript for selecting diamond price
         const diamondButtons = document.querySelectorAll(".diamond-grid button");
         const selectedPriceDisplay = document.getElementById("selected-price");
         let selectedPrice = null;
@@ -194,6 +196,7 @@
             });
         });
 
+        // Buy Now button click event
         const buyNowButton = document.getElementById("buy-now");
         const uidInput = document.getElementById("uid");
 
@@ -208,6 +211,18 @@
                 return;
             }
             alert(`ধন্যবাদ! আপনার UID: ${uid} এবং মূল্য: ৳${selectedPrice} জমা হয়েছে।`);
+        });
+
+        // Redirection for live chat and live prove
+        const liveChatButton = document.getElementById("live-chat");
+        const liveProveButton = document.getElementById("live-prove");
+
+        liveChatButton.addEventListener("click", () => {
+            window.location.href = "https://www.facebook.com/profile.php?id=61558001068792";
+        });
+
+        liveProveButton.addEventListener("click", () => {
+            window.location.href = "https://www.facebook.com/xmostafizur";
         });
     </script>
 </body>
